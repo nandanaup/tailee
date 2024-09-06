@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="mainc.js"></script>
+  </head>
+  <body class="font-poppins">
+    <section
+      class="h-[50vh] w-full bg-cover bg-center text-white text-center"
+      style="
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url('contacrs2024-08-22 at 21.21.46_82d8ae6a.jpg');
+      "
+    >
+      <nav class="flex items-center justify-between p-4">
+        <a href="index.html">
+          <img src="./assets/1.png" alt="University Logo" />
+        </a>
+        <div class="hidden lg:flex space-x-8 text-sm">
+          <a href="#" class="text-white">HOME</a>
+          <a href="#" class="text-white">ABOUT</a>
+          <a href="#" class="text-white">COURSE</a>
+          <a href="#" class="text-white">BLOG</a>
+          <a href="#" class="text-white">CONTACT</a>
+        </div>
+        <div class="cursor-pointer md:hidden">
+          <i class="fa fa-bars text-white" onclick="showMenu()"></i>
+        </div>
+      </nav>
+
+      <div
+        class="fixed top-0 right-[-100%] w-[60%] h-full bg-orange-600 text-white p-8 transition-all duration-300 lg:hidden"
+        id="logslink"
+      >
+        <i class="fa fa-times cursor-pointer text-2xl" onclick="hideMenu()"></i>
+        <ul class="mt-8 space-y-4">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">COURSE</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <h1 class="mt-8 text-4xl">Contact Us</h1>
+    </section>
+
+    <section class="w-4/5 mx-auto py-20">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14192.851571250349!2d75.700243!3d27.212465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cffc30dacc2db%3A0xb78e5c340c935a95!2sUniversity%20of%20Engineering%20%26%20Management%20(UEM)%2C%20Jaipur!5e0!3m2!1sen!2som!4v1724839191751!5m2!1sen!2som"
+        class="w-full h-[450px] border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="w-4/5 mx-auto">
+      <div class="flex flex-wrap justify-between">
+        <div class="w-full md:w-[48%] mb-8">
+          <div class="flex items-center mb-10">
+            <i class="fa fa-home text-2xl text-red-500 mr-8"></i>
+            <span>
+              <h5 class="text-xl font-normal text-gray-700">
+                University of Engineering and Management, Gurukul Campus
+              </h5>
+              <p>Jaipur, Rajasthan, India</p>
+            </span>
+          </div>
+          <div class="flex items-center mb-10">
+            <i class="fa fa-phone text-2xl text-red-500 mr-8"></i>
+            <span>
+              <h5 class="text-xl font-normal text-gray-700">+91 6378281761</h5>
+              <p>Monday to Saturday, 10AM to 6PM</p>
+            </span>
+          </div>
+          <div class="flex items-center mb-10">
+            <i class="fa fa-envelope-o text-2xl text-red-500 mr-8"></i>
+            <span>
+              <h5 class="text-xl font-normal text-gray-700">email@gmail.com</h5>
+              <p>Email us your queries</p>
+            </span>
+          </div>
+        </div>
+        <div class="w-full md:w-[48%]">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              required
+              class="w-full p-4 mb-4 border border-gray-300"
+            />
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              required
+              class="w-full p-4 mb-4 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="Enter Your Subject"
+              required
+              class="w-full p-4 mb-4 border border-gray-300"
+            />
+            <textarea
+              rows="8"
+              placeholder="Your Message"
+              required
+              class="w-full p-4 mb-4 border border-gray-300"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-white text-blue-600 border border-blue-600 py-2 px-10 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition"
+            >
+              Send Me
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
