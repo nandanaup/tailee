@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script defer src="main.js"></script>
+    <script defer type="module" src="main.js"></script>
   </head>
   <body class="m-0 p-0 font-poppins text-gray-700">
     <section
@@ -26,21 +26,20 @@
         </a>
         <div class="cursor-pointer lg:hidden">
           <i
+            id="hamburgerMenu"
             class="fa fa-bars text-white cursor-pointer"
-            onclick="showMenu()"
           ></i>
         </div>
         <div
-          class="fixed top-0 right-[-100%] w-[60%] h-full bg-orange-600 text-white p-8 transition-all duration-300 lg:hidden"
+          class="fixed z-10 top-0 right-[-100%] w-[60%] h-full bg-orange-600 text-white p-8 transition-all duration-300 lg:hidden"
           id="logslink"
         >
-          <i
-            class="fa fa-times cursor-pointer text-2xl"
-            onclick="hideMenu()"
-          ></i>
+          <i id="menuClose" class="fa fa-times cursor-pointer text-2xl"></i>
           <ul class="mt-8 space-y-4">
             <li>
-              <a href="#" class="text-white hover:underline hover:text-red-600"
+              <a
+                href="./index.html"
+                class="text-white hover:underline hover:text-red-600"
                 >HOME</a
               >
             </li>
@@ -103,7 +102,7 @@
           </li>
           <li class="relative inline-block py-2 px-3 text-sm">
             <a
-              href="./contacts.html"
+              href="/src/pages/contacts.html  "
               class="text-white hover:underline hover:text-red-600"
               >CONTACT</a
             >
@@ -137,18 +136,22 @@
     </section>
 
     <section class="w-4/5 mx-auto text-center py-24">
-      <h1 class="text-4xl font-semibold">Courses we offer</h1>
-      <p class="text-gray-600 text-sm mt-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      <h1 class="text-5xl text-black font-semibold">Courses we offer</h1>
+      <p class="text-gray-600 mt-4 text-sm md:text-base">
+        Explore the intersection of technology and society. Learn about
+        environmental justice. Take the famous Problem of God course. Our
+        innovative<br />
+        courses inspire and invite you to help solve some of today’s most
+        pressing local, national and global issues.
       </p>
-      <div class="mt-12 flex flex-wrap justify-between">
+      <div class="mt-12 flex flex-wrap justify-between gap-6">
         <div
           class="bg-pink-50 rounded-lg mb-8 p-6 flex-1 transition-shadow duration-500 hover:shadow-2xl"
         >
           <h3 class="text-lg font-semibold text-center mb-4">
             Undergraduate Programs
           </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
+          <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
             For decades, Eduford College has improved the health of our
             communities, one graduate at a time. The JoAnn McGrath School of
             Nursing and Health Professions, as one of the largest nursing
@@ -163,7 +166,7 @@
           <h3 class="text-lg font-semibold text-center mb-4">
             Graduate Programs
           </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
+          <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
             Building on our strong roots in leadership, health care and
             education, Eduford is proud to offer an array of coed graduate
             programs for women and men who are ready to advance their careers
@@ -178,7 +181,7 @@
           <h3 class="text-lg font-semibold text-center mb-4">
             Post Graduation
           </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
+          <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
             The Eduford, as one of the largest nursing schools in Wisconsin,
             offers a wide array of fully accredited nursing programs, guaranteed
             clinical placements and a technology-rich Center for Clinical
@@ -191,9 +194,13 @@
     </section>
 
     <section class="w-4/5 mx-auto text-center py-24">
-      <h1 class="text-4xl font-semibold">Our Global Campus</h1>
-      <p class="text-gray-600 text-sm mt-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <h1 class="text-5xl text-black font-semibold">Our Global Campus</h1>
+      <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
+        The University of Hartford's main campus is located on Bloomfield
+        Avenue. Surrounded by green space, the main campus is divided into
+        residential<br />
+        and academic buildings connected by a bridge that overlooks the north
+        branch of the Park River, known to us as Hog River.
       </p>
       <div class="mt-12 flex flex-wrap justify-between gap-6">
         <div class="relative mb-8 flex-1 overflow-hidden rounded-lg">
@@ -236,9 +243,12 @@
     </section>
 
     <section class="w-4/5 mx-auto text-center py-24">
-      <h1 class="text-4xl font-semibold">Our Facilities</h1>
-      <p class="text-gray-600 text-sm mt-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <h1 class="text-5xl text-black font-semibold">Our Facilities</h1>
+      <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
+        We commit to meet the financial need of every admitted undergraduate
+        student. We don’t consider your ability to pay when we review your<br />
+        application, and we don’t base our decision on whether you can cover the
+        cost. If you’re accepted here, you belong here.
       </p>
       <div class="mt-12 flex flex-wrap justify-between gap-6">
         <div class="flex-1 mb-8 text-left">
@@ -249,8 +259,12 @@
           />
           <h3 class="text-lg font-semibold mb-4">World Class Library</h3>
           <p class="text-gray-600 text-sm">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
-            eaque nisi cumque rem, explicabo tempore!
+            For decades, Eduford College has improved the health of our
+            communities, one graduate at a time. The JoAnn McGrath School of
+            Nursing and Health Professions, as one of the largest nursing
+            schools in Wisconsin, offers a wide array of fully accredited
+            nursing programs, guaranteed clinical placements and a
+            technology-rich Center for Clinical Education.
           </p>
         </div>
         <div class="flex-1 mb-8 text-left">
@@ -261,8 +275,12 @@
           />
           <h3 class="text-lg font-semibold mb-4">Largest Play Ground</h3>
           <p class="text-gray-600 text-sm">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
-            aliquid ratione temporibus architecto a maxime?
+            Building on our strong roots in leadership, health care and
+            education, Eduford is proud to offer an array of coed graduate
+            programs for women and men who are ready to advance their careers
+            and grow as leaders. The Eduford College Community Psychology
+            Master's program will help you to meet your goals of becoming a
+            Licensed Professional Counselor
           </p>
         </div>
         <div class="flex-1 mb-8 text-left">
@@ -273,61 +291,67 @@
           />
           <h3 class="text-lg font-semibold mb-4">Tasty and Healthy Food</h3>
           <p class="text-gray-600 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            deleniti accusamus voluptas possimus aliquam bhfacilis?
+            The Eduford, as one of the largest nursing schools in Wisconsin,
+            offers a wide array of fully accredited nursing programs, guaranteed
+            clinical placements and a technology-rich Center for Clinical
+            Education. The Eduford College Community Psychology Master's program
+            will help you to meet your goals of becoming a Licensed Professional
+            Counselor.
           </p>
         </div>
       </div>
     </section>
 
     <section class="w-4/5 mx-auto text-center py-24">
-      <h1 class="text-4xl font-semibold">What Our Student Says</h1>
-      <p class="text-gray-600 text-sm mt-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eaque
-        officia cum, expedita amet deleniti nesciunt optio ratione, architecto
-        pariatur a. Quia enim minima odio.
+      <h1 class="text-5xl text-black font-semibold">What Our Student Says</h1>
+      <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
+        We commit to meet the financial need of every admitted undergraduate
+        student. We don’t consider your ability to pay when we review your
+        <br />application, and we don’t base our decision on whether you can
+        cover the cost. If you’re accepted here, you belong here.
       </p>
-      <div class="mt-12 flex flex-wrap justify-between">
+      <div class="mt-12 flex flex-wrap justify-between gap-6">
         <div
           class="flex-1 flex items-start bg-pink-50 rounded-lg p-6 mb-12 shadow-lg transition-shadow duration-500 hover:shadow-2xl"
         >
           <img
-            src="./assets/Brenda Cherotich.jpg"
+            src="./assets/BrendaCherotich.jpg"
             alt="Brenda Cherotich"
             class="w-10 h-10 rounded-full mr-6"
           />
           <div>
             <p class="text-gray-600 text-sm mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis
-              eligendi voluptates quas dolorum sunt enim repellendus,
-              reprehenderit aliquid. Totam a
+              “Eduford is home to me not because of the fancy buildings like
+              Healy Hall, or its prestigious reputation, but rather because of
+              the university’s care for the whole person as each of us attempts
+              to live our lives for others.”
             </p>
-            <h3 class="text-lg font-semibold">Brenda Cherotich</h3>
+            <h3 class="text-2xl font-semibold text-black">Brenda Cherotich</h3>
           </div>
         </div>
         <div
           class="flex-1 flex items-start bg-pink-50 rounded-lg p-6 mb-12 shadow-lg transition-shadow duration-500 hover:shadow-2xl"
         >
           <img
-            src="./assets/Samuel Macharia.jpg"
+            src="./assets/SamuelMacharia.jpg"
             alt="Samuel Macharia"
             class="w-10 h-10 rounded-full mr-6"
           />
           <div>
             <p class="text-gray-600 text-sm mb-4">
-              Eligendi tempora aliquam totam numquam eius illo accusamus,
-              officia quidem dicta animi ullam natus magni impedit doloremque
-              sapiente in quaerat p
+              “It’s likely that you will come to love some of the most amazing
+              souls this campus has to offer. That love may come in the form of
+              friendships that you know will last forever.”
             </p>
-            <h3 class="text-lg font-semibold">Samuel Macharia</h3>
+            <h3 class="text-2xl font-semibold text-black">Samuel Macharia</h3>
           </div>
         </div>
       </div>
     </section>
 
     <section
-      class="relative mx-auto my-24 w-4/5 text-center py-24 bg-black bg-opacity-70 bg-blend-overlay bg-cover rounded-lg"
-      style="background-image: url('./assets/last\ .jpg')"
+      class="relative mx-auto my-24 w-full text-center py-24 bg-black bg-opacity-70 bg-blend-overlay bg-cover rounded-lg"
+      style="background-image: url('./assets/last.jpg')"
     >
       <h1 class="text-4xl font-semibold text-white mb-10">
         Enroll For Our Various Online Courses <br />Anywhere From The World
@@ -339,9 +363,9 @@
       >
     </section>
 
-    <section class="w-full text-center py-12 text-gray-700">
-      <h4 class="text-lg font-semibold mb-4 text-gray-900">About Us</h4>
-      <p class="text-sm mb-4">
+    <footer class="w-full text-center py-12 text-gray-700">
+      <h4 class="text-xl text-black font-semibold mb-4">About Us</h4>
+      <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
         We’re a leading research university with a heart. Founded in the decade
         that the U.S. Constitution was signed, we’re the nation’s oldest
         Catholic and Jesuit university. We’re a<br />
@@ -349,6 +373,6 @@
         Meet the people and places that make Eduford home.
       </p>
       <p class="text-sm">Made by <i>Yousef Eishabrawy</i></p>
-    </section>
+    </footer>
   </body>
 </html>

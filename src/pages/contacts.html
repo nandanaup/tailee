@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script defer src="mainc.js"></script>
+    <script defer type="module" src="../../mainc.js"></script>
   </head>
   <body class="font-poppins">
     <section
@@ -23,38 +23,102 @@
             rgba(4, 9, 30, 0.7),
             rgba(4, 9, 30, 0.7)
           ),
-          url('contacrs2024-08-22 at 21.21.46_82d8ae6a.jpg');
+          url('../../contacrs.jpg');
       "
     >
-      <nav class="flex items-center justify-between p-4">
+      <nav class="flex items-center justify-between py-6 px-4 lg:px-6">
         <a href="index.html">
-          <img src="./assets/1.png" alt="University Logo" />
+          <img src="../../assets/1.png" alt="University Logo" class="w-36" />
         </a>
-        <div class="hidden lg:flex space-x-8 text-sm">
-          <a href="#" class="text-white">HOME</a>
-          <a href="#" class="text-white">ABOUT</a>
-          <a href="#" class="text-white">COURSE</a>
-          <a href="#" class="text-white">BLOG</a>
-          <a href="#" class="text-white">CONTACT</a>
-        </div>
-        <div class="cursor-pointer md:hidden">
-          <i class="fa fa-bars text-white" onclick="showMenu()"></i>
-        </div>
-      </nav>
 
-      <div
-        class="fixed top-0 right-[-100%] w-[60%] h-full bg-orange-600 text-white p-8 transition-all duration-300 lg:hidden"
-        id="logslink"
-      >
-        <i class="fa fa-times cursor-pointer text-2xl" onclick="hideMenu()"></i>
-        <ul class="mt-8 space-y-4">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">COURSE</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">CONTACT</a></li>
+        <div class="cursor-pointer lg:hidden">
+          <i
+            id="hamburgerMenu"
+            class="fa fa-bars text-white cursor-pointer"
+          ></i>
+        </div>
+        <div
+          class="fixed z-10 top-0 right-[-100%] w-[60%] h-full bg-orange-600 text-white p-8 transition-all duration-300 lg:hidden"
+          id="logslink"
+        >
+          <i id="menuClose" class="fa fa-times cursor-pointer text-2xl"></i>
+          <ul class="mt-8 space-y-4">
+            <li>
+              <a
+                href="./index.html"
+                class="text-white hover:underline hover:text-red-600"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline hover:text-red-600"
+                >ABOUT</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline hover:text-red-600"
+                >COURSE</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline hover:text-red-600"
+                >BLOG</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/contacts.html"
+                class="text-white hover:underline hover:text-red-600"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="hidden lg:flex space-x-4">
+          <li class="relative inline-block py-2 px-3 text-sm">
+            <a href="#" class="text-white hover:underline hover:text-red-600"
+              >HOME</a
+            >
+            <span
+              class="block h-0.5 w-0 bg-red-600 mt-1 transition-all duration-500"
+            ></span>
+          </li>
+          <li class="relative inline-block py-2 px-3 text-sm">
+            <a href="#" class="text-white hover:underline hover:text-red-600"
+              >ABOUT</a
+            >
+            <span
+              class="block h-0.5 w-0 bg-red-600 mt-1 transition-all duration-500"
+            ></span>
+          </li>
+          <li class="relative inline-block py-2 px-3 text-sm">
+            <a href="#" class="text-white hover:underline hover:text-red-600"
+              >COURSE</a
+            >
+            <span
+              class="block h-0.5 w-0 bg-red-600 mt-1 transition-all duration-500"
+            ></span>
+          </li>
+          <li class="relative inline-block py-2 px-3 text-sm">
+            <a href="#" class="text-white hover:underline hover:text-red-600"
+              >BLOG</a
+            >
+            <span
+              class="block h-0.5 w-0 bg-red-600 mt-1 transition-all duration-500"
+            ></span>
+          </li>
+          <li class="relative inline-block py-2 px-3 text-sm">
+            <a
+              href="/src/pages/contacts.html  "
+              class="text-white hover:underline hover:text-red-600"
+              >CONTACT</a
+            >
+            <span
+              class="block h-0.5 w-0 bg-red-600 mt-1 transition-all duration-500"
+            ></span>
+          </li>
         </ul>
-      </div>
+      </nav>
 
       <h1 class="mt-8 text-4xl">Contact Us</h1>
     </section>
@@ -73,7 +137,7 @@
       <div class="flex flex-wrap justify-between">
         <div class="w-full md:w-[48%] mb-8">
           <div class="flex items-center mb-10">
-            <i class="fa fa-home text-2xl text-red-500 mr-8"></i>
+            <i class="fa fa-home fa-2x text-2xl text-red-500 mr-8"></i>
             <span>
               <h5 class="text-xl font-normal text-gray-700">
                 University of Engineering and Management, Gurukul Campus
@@ -82,14 +146,14 @@
             </span>
           </div>
           <div class="flex items-center mb-10">
-            <i class="fa fa-phone text-2xl text-red-500 mr-8"></i>
+            <i class="fa fa-phone text-2xl fa-2x text-red-500 mr-8"></i>
             <span>
               <h5 class="text-xl font-normal text-gray-700">+91 6378281761</h5>
               <p>Monday to Saturday, 10AM to 6PM</p>
             </span>
           </div>
           <div class="flex items-center mb-10">
-            <i class="fa fa-envelope-o text-2xl text-red-500 mr-8"></i>
+            <i class="fa fa-envelope-o fa-2x text-2xl text-red-500 mr-8"></i>
             <span>
               <h5 class="text-xl font-normal text-gray-700">email@gmail.com</h5>
               <p>Email us your queries</p>
@@ -132,5 +196,16 @@
         </div>
       </div>
     </section>
+    <footer class="w-full text-center py-12 text-gray-700">
+      <h4 class="text-xl text-black font-semibold mb-4">About Us</h4>
+      <p class="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
+        We’re a leading research university with a heart. Founded in the decade
+        that the U.S. Constitution was signed, we’re the nation’s oldest
+        Catholic and Jesuit university. We’re a<br />
+        community of people who bridge our disparate experiences and identities.
+        Meet the people and places that make Eduford home.
+      </p>
+      <p class="text-sm">Made by <i>Yousef Eishabrawy</i></p>
+    </footer>
   </body>
 </html>
